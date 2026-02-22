@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ares Crypto – Social Media Graphics Batch 01</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: #01060f;
+  font-family: 'DM Sans', sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Page header */
+.page-header {
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+.page-header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: 6px;
+  background: linear-gradient(90deg, #00c9b8, #f0f4ff, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.page-header p {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #4a6080;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+/* Card wrapper */
+.card-wrap {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.card-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #00c9b8;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ─── BASE GRAPHIC CARD ─── */
+.graphic {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+
+/* ══════════════ CARD 1 – DCA ══════════════ */
+#card1 {
+  background: #030c1e;
+  padding: 36px;
+}
+#card1 .bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,201,184,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,201,184,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+#card1 .glow-tl {
+  position: absolute; top: -80px; left: -60px;
+  width: 320px; height: 320px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,201,184,0.14) 0%, transparent 65%);
+  animation: pulse1 4s ease-in-out infinite;
+}
+#card1 .glow-br {
+  position: absolute; bottom: -60px; right: -60px;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 65%);
+  animation: pulse1 4s ease-in-out infinite reverse;
+}
+@keyframes pulse1 { 0%,100%{opacity:.7;transform:scale(1)} 50%{opacity:1;transform:scale(1.08)} }
+
+#card1 .brand {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; color: #00c9b8;
+  position: relative; z-index: 2; margin-bottom: auto;
+}
+#card1 .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 38px; letter-spacing: 1.5px; line-height: 1.1;
+  color: #f0f4ff; position: relative; z-index: 2;
+  margin-bottom: 20px;
+}
+#card1 .title span { color: #00e5d2; }
+
+/* DCA calendar visual */
+#card1 .calendar {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px;
+  margin-bottom: 18px; position: relative; z-index: 2;
+}
+#card1 .day {
+  aspect-ratio: 1; border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8px; color: rgba(240,244,255,0.3);
+  font-family: 'Space Mono', monospace;
+}
+#card1 .day.buy {
+  background: rgba(0,201,184,0.18);
+  border-color: rgba(0,201,184,0.5);
+  color: #00e5d2; font-weight: 700;
+  animation: buyPulse 2s ease-in-out infinite;
+}
+#card1 .day.buy:nth-child(8) { animation-delay: 0.2s; }
+#card1 .day.buy:nth-child(15) { animation-delay: 0.4s; }
+#card1 .day.buy:nth-child(22) { animation-delay: 0.6s; }
+#card1 .day.buy:nth-child(29) { animation-delay: 0.8s; }
+@keyframes buyPulse { 0%,100%{box-shadow:none} 50%{box-shadow:0 0 10px rgba(0,201,184,0.6)} }
+
+/* DCA trend line */
+#card1 .trend-area {
+  position: relative; z-index: 2; height: 60px; margin-bottom: 14px;
+}
+#card1 .trend-area svg { width: 100%; height: 100%; }
+
+#card1 .bullets {
+  display: flex; flex-direction: column; gap: 5px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card1 .bullet {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; color: rgba(240,244,255,0.75); line-height: 1.3;
+}
+#card1 .bullet::before { content:'▸'; color:#00c9b8; font-size:9px; flex-shrink:0; }
+
+#card1 .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 12px; border-top: 1px solid rgba(0,201,184,0.12);
+  position: relative; z-index: 2;
+}
+#card1 .logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2.5px;
+  background: linear-gradient(90deg, #00c9b8, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#card1 .tagline { font-family:'Space Mono',monospace; font-size:8px; color:#4a6080; letter-spacing:1px; }
+#card1 .disc { font-family:'Space Mono',monospace; font-size:7px; color:rgba(74,96,128,0.5); margin-top:6px; position:relative; z-index:2; }
+
+
+/* ══════════════ CARD 2 – RISK MGMT ══════════════ */
+#card2 {
+  background: #03101a;
+  padding: 36px;
+}
+#card2 .bg-hex {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34z' fill='none' stroke='rgba(0%2C201%2C184%2C0.04)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 56px 100px;
+}
+#card2 .glow-center {
+  position: absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,80,80,0.06) 0%, transparent 65%);
+}
+#card2 .brand {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; color: #00c9b8;
+  position: relative; z-index: 2; margin-bottom: auto;
+}
+#card2 .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; letter-spacing: 1.5px; line-height: 1.1;
+  color: #f0f4ff; position: relative; z-index: 2;
+  margin-bottom: 22px;
+}
+#card2 .title span { color: #ff6060; }
+
+/* Risk meter visual */
+#card2 .risk-meter {
+  position: relative; z-index: 2; margin-bottom: 20px;
+}
+#card2 .risk-row {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 8px;
+}
+#card2 .risk-label {
+  font-size: 10px; font-family:'Space Mono',monospace;
+  color: rgba(240,244,255,0.5); min-width: 55px;
+}
+#card2 .risk-bar-bg {
+  flex: 1; height: 8px; border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+  overflow: hidden; position: relative;
+}
+#card2 .risk-bar-fill {
+  height: 100%; border-radius: 4px;
+  position: relative;
+  animation: barGrow 1.5s ease-out forwards;
+  transform-origin: left;
+}
+@keyframes barGrow { from{width:0%} }
+.fill-green { background: linear-gradient(90deg, #00c9b8, #00e5d2); }
+.fill-gold  { background: linear-gradient(90deg, #c9a84c, #f0c96a); }
+.fill-red   { background: linear-gradient(90deg, #ff4d4d, #ff8080); }
+#card2 .risk-pct {
+  font-size: 10px; font-family:'Space Mono',monospace;
+  color: rgba(240,244,255,0.6); min-width: 30px; text-align:right;
+}
+
+/* Shield icon */
+#card2 .shield-wrap {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+}
+#card2 .shield {
+  width: 40px; height: 44px; flex-shrink: 0;
+}
+#card2 .shield-text {
+  font-size: 12px; color: rgba(240,244,255,0.7); line-height: 1.5;
+}
+#card2 .shield-text strong { color: #f0c96a; }
+
+#card2 .bullets {
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card2 .bullet {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 11px; color: rgba(240,244,255,0.75); line-height: 1.3;
+}
+#card2 .bullet::before { content:'▸'; color:#00c9b8; font-size:9px; flex-shrink:0; margin-top:2px; }
+
+#card2 .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 12px; border-top: 1px solid rgba(255,96,96,0.15);
+  position: relative; z-index: 2;
+}
+#card2 .logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2.5px;
+  background: linear-gradient(90deg, #00c9b8, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#card2 .tagline { font-family:'Space Mono',monospace; font-size:8px; color:#4a6080; letter-spacing:1px; }
+#card2 .disc { font-family:'Space Mono',monospace; font-size:7px; color:rgba(74,96,128,0.5); margin-top:6px; position:relative; z-index:2; }
+
+
+/* ══════════════ CARD 3 – RWA ══════════════ */
+#card3 {
+  background: #02080f;
+  padding: 36px;
+}
+#card3 .bg-nodes {
+  position: absolute; inset: 0; overflow: hidden;
+}
+#card3 .brand {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; color: #00c9b8;
+  position: relative; z-index: 2; margin-bottom: auto;
+}
+#card3 .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 34px; letter-spacing: 1.5px; line-height: 1.1;
+  color: #f0f4ff; position: relative; z-index: 2;
+  margin-bottom: 18px;
+}
+#card3 .title span { color: #c9a84c; }
+
+/* Asset bridge visual */
+#card3 .bridge {
+  display: flex; align-items: center; gap: 8px;
+  position: relative; z-index: 2; margin-bottom: 18px;
+}
+#card3 .asset-box {
+  flex: 1; padding: 10px 8px; border-radius: 10px;
+  border: 1px solid; display: flex; flex-direction: column;
+  align-items: center; gap: 4px;
+}
+#card3 .asset-box.real {
+  background: rgba(201,168,76,0.08); border-color: rgba(201,168,76,0.3);
+}
+#card3 .asset-box.token {
+  background: rgba(0,201,184,0.08); border-color: rgba(0,201,184,0.3);
+}
+#card3 .asset-icon { font-size: 22px; line-height: 1; }
+#card3 .asset-name {
+  font-family: 'Space Mono',monospace; font-size: 8px; letter-spacing: 1px;
+  text-align: center;
+}
+#card3 .asset-box.real .asset-name { color: #c9a84c; }
+#card3 .asset-box.token .asset-name { color: #00c9b8; }
+#card3 .asset-sub { font-size: 9px; color: rgba(240,244,255,0.4); text-align:center; }
+
+#card3 .arrow-col {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+#card3 .arrow-label {
+  font-family: 'Space Mono',monospace; font-size: 7px; color: #00c9b8;
+  letter-spacing: 1px; white-space: nowrap;
+}
+#card3 .arrow-icon { font-size: 18px; color: #00c9b8; animation: arrowPulse 1.5s ease-in-out infinite; }
+@keyframes arrowPulse { 0%,100%{opacity:.5;transform:scale(1)} 50%{opacity:1;transform:scale(1.2)} }
+
+#card3 .stats-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card3 .stat {
+  background: rgba(255,255,255,0.03); border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 8px; text-align: center;
+}
+#card3 .stat-val {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px;
+  letter-spacing: 1px; color: #00e5d2; display: block;
+}
+#card3 .stat-lbl {
+  font-family: 'Space Mono',monospace; font-size: 7px;
+  color: rgba(240,244,255,0.35); letter-spacing: 1px;
+  display: block; margin-top: 2px;
+}
+
+#card3 .bullets {
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card3 .bullet {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 11px; color: rgba(240,244,255,0.75); line-height: 1.3;
+}
+#card3 .bullet::before { content:'▸'; color:#c9a84c; font-size:9px; flex-shrink:0; margin-top:2px; }
+
+#card3 .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 12px; border-top: 1px solid rgba(201,168,76,0.15);
+  position: relative; z-index: 2;
+}
+#card3 .logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2.5px;
+  background: linear-gradient(90deg, #00c9b8, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#card3 .tagline { font-family:'Space Mono',monospace; font-size:8px; color:#4a6080; letter-spacing:1px; }
+#card3 .disc { font-family:'Space Mono',monospace; font-size:7px; color:rgba(74,96,128,0.5); margin-top:6px; position:relative; z-index:2; }
+
+
+/* ══════════════ CARD 4 – STABLECOIN YIELD ══════════════ */
+#card4 {
+  background: #021008;
+  padding: 36px;
+}
+#card4 .bg-lines {
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 30px,
+    rgba(0,201,184,0.02) 30px,
+    rgba(0,201,184,0.02) 31px
+  );
+}
+#card4 .glow-gold {
+  position: absolute; bottom: -80px; right: -80px;
+  width: 350px; height: 350px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 65%);
+  animation: pulse1 5s ease-in-out infinite;
+}
+#card4 .brand {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; color: #00c9b8;
+  position: relative; z-index: 2; margin-bottom: auto;
+}
+#card4 .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; letter-spacing: 1.5px; line-height: 1.1;
+  color: #f0f4ff; position: relative; z-index: 2;
+  margin-bottom: 18px;
+}
+#card4 .title span { color: #f0c96a; }
+
+/* Coin stack visual */
+#card4 .coin-visual {
+  position: relative; z-index: 2; margin-bottom: 16px;
+  display: flex; align-items: flex-end; gap: 6px;
+}
+#card4 .coin-col {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+#card4 .coin-bar-wrap {
+  width: 100%; position: relative; border-radius: 8px;
+  overflow: hidden;
+}
+#card4 .coin-bar {
+  width: 100%; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue',sans-serif; font-size: 14px; letter-spacing: 1px;
+  border: 1px solid;
+}
+#card4 .coin-col-label {
+  font-family: 'Space Mono',monospace; font-size: 7px;
+  color: rgba(240,244,255,0.35); letter-spacing: 0.5px;
+  text-align: center;
+}
+.tier1-bar { background: rgba(0,201,184,0.15); border-color: rgba(0,201,184,0.4); color: #00e5d2; height: 55px; animation: coinRise 2s ease-out; }
+.tier2-bar { background: rgba(201,168,76,0.15); border-color: rgba(201,168,76,0.4); color: #f0c96a; height: 75px; animation: coinRise 2s ease-out 0.2s both; }
+.tier3-bar { background: rgba(160,80,255,0.15); border-color: rgba(160,80,255,0.4); color: #c080ff; height: 95px; animation: coinRise 2s ease-out 0.4s both; }
+@keyframes coinRise { from{height:0;opacity:0} }
+
+#card4 .yield-labels {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+  margin-bottom: 14px;
+}
+#card4 .yield-item {
+  padding: 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+#card4 .yield-pct {
+  font-family: 'Bebas Neue',sans-serif; font-size: 18px;
+  letter-spacing: 1px; display: block; margin-bottom: 2px;
+}
+#card4 .yield-name {
+  font-family: 'Space Mono',monospace; font-size: 7px;
+  color: rgba(240,244,255,0.35); letter-spacing: 0.5px;
+}
+
+#card4 .bullets {
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card4 .bullet {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 11px; color: rgba(240,244,255,0.75); line-height: 1.3;
+}
+#card4 .bullet::before { content:'▸'; color:#f0c96a; font-size:9px; flex-shrink:0; margin-top:2px; }
+
+#card4 .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 12px; border-top: 1px solid rgba(201,168,76,0.15);
+  position: relative; z-index: 2;
+}
+#card4 .logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2.5px;
+  background: linear-gradient(90deg, #00c9b8, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#card4 .tagline { font-family:'Space Mono',monospace; font-size:8px; color:#4a6080; letter-spacing:1px; }
+#card4 .disc { font-family:'Space Mono',monospace; font-size:7px; color:rgba(74,96,128,0.5); margin-top:6px; position:relative; z-index:2; }
+
+
+/* ══════════════ CARD 5 – CANDLESTICKS ══════════════ */
+#card5 {
+  background: #040a18;
+  padding: 36px;
+}
+#card5 .bg-gradient {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 80%, rgba(0,201,184,0.07) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 50%);
+}
+#card5 .brand {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; color: #00c9b8;
+  position: relative; z-index: 2; margin-bottom: auto;
+}
+#card5 .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; letter-spacing: 1.5px; line-height: 1.1;
+  color: #f0f4ff; position: relative; z-index: 2;
+  margin-bottom: 16px;
+}
+#card5 .title span { color: #00e5d2; }
+
+/* Large labeled candles */
+#card5 .candle-stage {
+  position: relative; z-index: 2;
+  display: flex; align-items: flex-end; justify-content: space-around;
+  height: 120px; margin-bottom: 10px; padding: 0 8px;
+}
+#card5 .candle-unit {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 2px; flex: 1; position: relative;
+}
+#card5 .c-label {
+  font-family: 'Space Mono',monospace; font-size: 7px;
+  color: rgba(240,244,255,0.4); text-align: center;
+  letter-spacing: 0.5px; position: absolute; bottom: -18px;
+  white-space: nowrap;
+}
+#card5 .c-wick-top { width: 2px; border-radius: 1px; }
+#card5 .c-body { width: 22px; border-radius: 3px; }
+#card5 .c-wick-bot { width: 2px; border-radius: 1px; }
+.bull-color { background: rgba(0,201,184,0.85); }
+.bear-color { background: rgba(255,70,70,0.85); }
+.doji-color { background: rgba(201,168,76,0.85); }
+.hammer-bull { background: rgba(0,201,184,0.85); }
+
+#card5 .legend {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5px;
+  margin-top: 28px; margin-bottom: 14px;
+}
+#card5 .legend-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 10px; color: rgba(240,244,255,0.65);
+}
+#card5 .legend-dot {
+  width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0;
+}
+
+#card5 .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 12px; border-top: 1px solid rgba(0,201,184,0.12);
+  position: relative; z-index: 2;
+}
+#card5 .logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2.5px;
+  background: linear-gradient(90deg, #00c9b8, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#card5 .tagline { font-family:'Space Mono',monospace; font-size:8px; color:#4a6080; letter-spacing:1px; }
+#card5 .disc { font-family:'Space Mono',monospace; font-size:7px; color:rgba(74,96,128,0.5); margin-top:6px; position:relative; z-index:2; }
+
+
+/* ══════════════ CARD 6 – AI AGENTS ══════════════ */
+#card6 {
+  background: #040810;
+  padding: 36px;
+}
+#card6 .bg-circuit {
+  position: absolute; inset: 0; overflow: hidden;
+}
+#card6 .brand {
+  font-family: 'Space Mono', monospace; font-size: 10px;
+  letter-spacing: 3px; color: #00c9b8;
+  position: relative; z-index: 2; margin-bottom: auto;
+}
+#card6 .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; letter-spacing: 1.5px; line-height: 1.1;
+  color: #f0f4ff; position: relative; z-index: 2;
+  margin-bottom: 18px;
+}
+#card6 .title span { color: #00e5d2; }
+
+/* Neural network canvas */
+#card6 .neural-wrap {
+  position: relative; z-index: 2; height: 120px; margin-bottom: 14px;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid rgba(0,201,184,0.1);
+  background: rgba(0,201,184,0.02);
+}
+#card6 canvas { width: 100%; height: 100%; }
+
+#card6 .ai-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card6 .ai-stat {
+  background: rgba(0,201,184,0.04); border-radius: 8px;
+  border: 1px solid rgba(0,201,184,0.12);
+  padding: 10px 6px; text-align: center;
+}
+#card6 .ai-val {
+  font-family: 'Bebas Neue',sans-serif; font-size: 18px;
+  letter-spacing: 1px; color: #00e5d2; display: block; margin-bottom: 2px;
+}
+#card6 .ai-lbl {
+  font-family: 'Space Mono',monospace; font-size: 7px;
+  color: rgba(240,244,255,0.3); letter-spacing: 0.5px;
+}
+
+#card6 .bullets {
+  display: flex; flex-direction: column; gap: 5px;
+  position: relative; z-index: 2; margin-bottom: 14px;
+}
+#card6 .bullet {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 11px; color: rgba(240,244,255,0.75); line-height: 1.3;
+}
+#card6 .bullet .bi { color: #00c9b8; font-size: 9px; flex-shrink: 0; margin-top: 2px; }
+
+#card6 .footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 12px; border-top: 1px solid rgba(0,201,184,0.12);
+  position: relative; z-index: 2;
+}
+#card6 .logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2.5px;
+  background: linear-gradient(90deg, #00c9b8, #c9a84c);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+#card6 .tagline { font-family:'Space Mono',monospace; font-size:8px; color:#4a6080; letter-spacing:1px; }
+#card6 .disc { font-family:'Space Mono',monospace; font-size:7px; color:rgba(74,96,128,0.5); margin-top:6px; position:relative; z-index:2; }
+
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>ARES CRYPTO</h1>
+  <p>SOCIAL MEDIA GRAPHICS · BATCH 01 · 6 POSTS</p>
+</div>
+
+
+<!-- ══ CARD 1: DCA ══ -->
+<div class="card-wrap">
+  <div class="card-label">01 · Dollar-Cost Averaging (DCA) · Instagram 1:1</div>
+  <div class="graphic" id="card1">
+    <div class="bg-grid"></div>
+    <div class="glow-tl"></div>
+    <div class="glow-br"></div>
+    <div class="brand">ARES CRYPTO · MASTER TRADING</div>
+    <div class="title">Stop timing the market.<br><span>Start owning it.</span></div>
+
+    <!-- Weekly calendar with buy days highlighted -->
+    <div class="calendar" id="dcaCalendar"></div>
+
+    <!-- SVG trend line showing DCA averaging effect -->
+    <div class="trend-area">
+      <svg viewBox="0 0 400 60" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="trendGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#00c9b8" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#00c9b8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- Market volatility path (jagged) -->
+        <polyline points="0,45 30,30 55,48 80,20 105,38 130,15 155,32 180,10 205,28 230,8 255,25 280,5 305,18 330,6 360,12 400,4"
+          fill="none" stroke="rgba(0,201,184,0.25)" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <!-- DCA average cost (smooth) -->
+        <polyline points="0,50 50,46 100,42 150,38 200,33 250,28 300,22 350,17 400,12"
+          fill="none" stroke="#00c9b8" stroke-width="2.5"/>
+        <!-- Fill under DCA line -->
+        <polygon points="0,50 50,46 100,42 150,38 200,33 250,28 300,22 350,17 400,12 400,60 0,60"
+          fill="url(#trendGrad)"/>
+        <!-- Buy markers -->
+        <circle cx="0" cy="50" r="4" fill="#c9a84c"/>
+        <circle cx="80" cy="42" r="4" fill="#c9a84c"/>
+        <circle cx="160" cy="37" r="4" fill="#c9a84c"/>
+        <circle cx="240" cy="30" r="4" fill="#c9a84c"/>
+        <circle cx="320" cy="21" r="4" fill="#c9a84c"/>
+        <circle cx="400" cy="12" r="4" fill="#c9a84c"/>
+        <text x="6" y="48" font-family="'Space Mono'" font-size="7" fill="#c9a84c">BUY</text>
+        <text x="86" y="40" font-family="'Space Mono'" font-size="7" fill="#c9a84c">BUY</text>
+        <text x="166" y="35" font-family="'Space Mono'" font-size="7" fill="#c9a84c">BUY</text>
+        <text x="246" y="28" font-family="'Space Mono'" font-size="7" fill="#c9a84c">BUY</text>
+        <text x="220" y="55" font-family="'Space Mono'" font-size="8" fill="rgba(0,201,184,0.6)">— Avg. Cost</text>
+        <text x="310" y="16" font-family="'Space Mono'" font-size="7" fill="rgba(240,244,255,0.3)">- Market</text>
+      </svg>
+    </div>
+
+    <div class="bullets">
+      <div class="bullet">Buy a fixed amount weekly — regardless of price</div>
+      <div class="bullet">Automatically lower your average cost over time</div>
+      <div class="bullet">Remove emotion from every investment decision</div>
+    </div>
+    <div class="footer">
+      <div class="logo">ARES CRYPTO</div>
+      <div class="tagline">MASTER TRADING</div>
+    </div>
+    <div class="disc">Not financial advice. Trading involves risk.</div>
+  </div>
+</div>
+
+
+<!-- ══ CARD 2: RISK MGMT ══ -->
+<div class="card-wrap">
+  <div class="card-label">02 · Risk Management & Position Sizing · Instagram 1:1</div>
+  <div class="graphic" id="card2">
+    <div class="bg-hex"></div>
+    <div class="glow-center"></div>
+    <div class="brand">ARES CRYPTO · MASTER TRADING</div>
+    <div class="title">The <span>1% Rule</span> that keeps your capital alive.</div>
+
+    <div class="shield-wrap">
+      <svg class="shield" viewBox="0 0 40 44" fill="none">
+        <path d="M20 2L4 9v12c0 10 7.2 18.6 16 21 8.8-2.4 16-11 16-21V9L20 2z"
+          fill="rgba(0,201,184,0.1)" stroke="rgba(0,201,184,0.5)" stroke-width="1.5"/>
+        <text x="11" y="26" font-family="'Bebas Neue'" font-size="16" fill="#00c9b8" letter-spacing="0">1%</text>
+      </svg>
+      <div class="shield-text">
+        Never risk more than <strong>1–2% per trade.</strong><br>
+        $1,000 account = max <strong>$10–20 at risk</strong> per position.
+      </div>
+    </div>
+
+    <div class="risk-meter">
+      <div class="risk-row">
+        <div class="risk-label">PER TRADE</div>
+        <div class="risk-bar-bg"><div class="risk-bar-fill fill-green" style="width:10%; animation-delay:0s;"></div></div>
+        <div class="risk-pct">1%</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-label">DAILY MAX</div>
+        <div class="risk-bar-bg"><div class="risk-bar-fill fill-gold" style="width:30%; animation-delay:0.3s;"></div></div>
+        <div class="risk-pct">3%</div>
+      </div>
+      <div class="risk-row">
+        <div class="risk-label">DANGER ZONE</div>
+        <div class="risk-bar-bg"><div class="risk-bar-fill fill-red" style="width:100%; animation-delay:0.6s;"></div></div>
+        <div class="risk-pct">&gt;10%</div>
+      </div>
+    </div>
+
+    <div class="bullets">
+      <div class="bullet">Set stop-loss BEFORE entering every trade</div>
+      <div class="bullet">Target minimum 2:1 reward-to-risk ratio</div>
+      <div class="bullet">Diversify — no single coin over 20% of portfolio</div>
+    </div>
+    <div class="footer">
+      <div class="logo">ARES CRYPTO</div>
+      <div class="tagline">MASTER TRADING</div>
+    </div>
+    <div class="disc">Not financial advice. Trading involves risk.</div>
+  </div>
+</div>
+
+
+<!-- ══ CARD 3: RWA ══ -->
+<div class="card-wrap">
+  <div class="card-label">03 · RWA Tokenization · Instagram 1:1</div>
+  <div class="graphic" id="card3">
+    <canvas id="rwaCanvas" class="bg-nodes" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+    <div class="brand">ARES CRYPTO · MASTER TRADING</div>
+    <div class="title">Real World Assets<br>are going <span>on-chain.</span></div>
+
+    <div class="bridge">
+      <div class="asset-box real">
+        <div class="asset-icon">🏢</div>
+        <div class="asset-name">REAL WORLD</div>
+        <div class="asset-sub">Buildings · Gold · Bonds</div>
+      </div>
+      <div class="arrow-col">
+        <div class="arrow-label">TOKENIZED</div>
+        <div class="arrow-icon">⟶</div>
+        <div class="arrow-label">ON-CHAIN</div>
+      </div>
+      <div class="asset-box token">
+        <div class="asset-icon">🔷</div>
+        <div class="asset-name">TOKEN</div>
+        <div class="asset-sub">From $10 · Fractional</div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-val">$16T</span>
+        <span class="stat-lbl">MARKET SIZE 2030</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">$10</span>
+        <span class="stat-lbl">MIN. INVESTMENT</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">24/7</span>
+        <span class="stat-lbl">TRADING ACCESS</span>
+      </div>
+    </div>
+
+    <div class="bullets">
+      <div class="bullet">BlackRock, JPMorgan already tokenizing assets</div>
+      <div class="bullet">Removes middlemen — direct blockchain ownership</div>
+      <div class="bullet">Research: Ondo Finance, Centrifuge, Maple</div>
+    </div>
+    <div class="footer">
+      <div class="logo">ARES CRYPTO</div>
+      <div class="tagline">MASTER TRADING</div>
+    </div>
+    <div class="disc">Not financial advice. DYOR. Trading involves risk.</div>
+  </div>
+</div>
+
+
+<!-- ══ CARD 4: STABLECOIN YIELD ══ -->
+<div class="card-wrap">
+  <div class="card-label">04 · Stablecoin Yield Strategies 2026 · Instagram 1:1</div>
+  <div class="graphic" id="card4">
+    <div class="bg-lines"></div>
+    <div class="glow-gold"></div>
+    <div class="brand">ARES CRYPTO · MASTER TRADING</div>
+    <div class="title">Your bank pays <span>0.5%.</span><br>DeFi pays 8–20%.</div>
+
+    <div class="coin-visual">
+      <div class="coin-col">
+        <div class="coin-bar tier1-bar">4–8%</div>
+        <div class="coin-col-label">AAVE / COMPOUND<br>USDC Lending</div>
+      </div>
+      <div class="coin-col">
+        <div class="coin-bar tier2-bar">8–15%</div>
+        <div class="coin-col-label">ETHENA sUSDe<br>Synthetic Yield</div>
+      </div>
+      <div class="coin-col">
+        <div class="coin-bar tier3-bar">5–12%</div>
+        <div class="coin-col-label">BUIDL / USDY<br>T-Bill Backed</div>
+      </div>
+    </div>
+
+    <div class="yield-labels">
+      <div class="yield-item">
+        <span class="yield-pct" style="color:#00e5d2;">LOW RISK</span>
+        <div class="yield-name">Battle-tested protocols</div>
+      </div>
+      <div class="yield-item">
+        <span class="yield-pct" style="color:#f0c96a;">MED RISK</span>
+        <div class="yield-name">Delta-neutral strategy</div>
+      </div>
+      <div class="yield-item">
+        <span class="yield-pct" style="color:#c080ff;">INST. GRADE</span>
+        <div class="yield-name">US Treasury backed</div>
+      </div>
+    </div>
+
+    <div class="bullets">
+      <div class="bullet">No price volatility — all USD-pegged assets</div>
+      <div class="bullet">Always check audits, TVL & yield sustainability</div>
+    </div>
+    <div class="footer">
+      <div class="logo">ARES CRYPTO</div>
+      <div class="tagline">MASTER TRADING</div>
+    </div>
+    <div class="disc">Not financial advice. DeFi carries smart contract risk.</div>
+  </div>
+</div>
+
+
+<!-- ══ CARD 5: CANDLESTICKS ══ -->
+<div class="card-wrap">
+  <div class="card-label">05 · Reading Candlestick Charts · Instagram 1:1</div>
+  <div class="graphic" id="card5">
+    <div class="bg-gradient"></div>
+    <div class="brand">ARES CRYPTO · MASTER TRADING</div>
+    <div class="title">Every candle tells<br>a <span>story.</span> Learn to read it.</div>
+
+    <div class="candle-stage">
+      <!-- Bullish -->
+      <div class="candle-unit">
+        <div class="c-wick-top bull-color" style="height:16px;"></div>
+        <div class="c-body bull-color" style="height:44px;"></div>
+        <div class="c-wick-bot bull-color" style="height:8px;"></div>
+        <div class="c-label">BULLISH<br>Buyers Won</div>
+      </div>
+      <!-- Bearish -->
+      <div class="candle-unit">
+        <div class="c-wick-top bear-color" style="height:10px;"></div>
+        <div class="c-body bear-color" style="height:40px;"></div>
+        <div class="c-wick-bot bear-color" style="height:18px;"></div>
+        <div class="c-label">BEARISH<br>Sellers Won</div>
+      </div>
+      <!-- Doji -->
+      <div class="candle-unit">
+        <div class="c-wick-top doji-color" style="height:28px;"></div>
+        <div class="c-body doji-color" style="height:4px;"></div>
+        <div class="c-wick-bot doji-color" style="height:28px;"></div>
+        <div class="c-label">DOJI<br>Indecision</div>
+      </div>
+      <!-- Hammer -->
+      <div class="candle-unit">
+        <div class="c-wick-top bull-color" style="height:4px;"></div>
+        <div class="c-body bull-color" style="height:18px;"></div>
+        <div class="c-wick-bot bull-color" style="height:46px;"></div>
+        <div class="c-label">HAMMER<br>Buyer Reversal</div>
+      </div>
+      <!-- Shooting Star -->
+      <div class="candle-unit">
+        <div class="c-wick-top bear-color" style="height:46px;"></div>
+        <div class="c-body bear-color" style="height:18px;"></div>
+        <div class="c-wick-bot bear-color" style="height:4px;"></div>
+        <div class="c-label">SHOOT. STAR<br>Seller Reversal</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#00c9b8;"></div>
+        Body = open vs close range
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:rgba(240,244,255,0.4); width:3px;"></div>
+        Wick = price rejection zone
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#00c9b8;"></div>
+        Teal = buyers dominated
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#ff4646;"></div>
+        Red = sellers dominated
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo">ARES CRYPTO</div>
+      <div class="tagline">MASTER TRADING</div>
+    </div>
+    <div class="disc">Not financial advice. Trading involves risk.</div>
+  </div>
+</div>
+
+
+<!-- ══ CARD 6: AI AGENTS ══ -->
+<div class="card-wrap">
+  <div class="card-label">06 · AI Agents in Crypto Trading · Instagram 1:1</div>
+  <div class="graphic" id="card6">
+    <div class="bg-circuit"></div>
+    <div class="brand">ARES CRYPTO · MASTER TRADING</div>
+    <div class="title"><span>AI agents</span> are trading<br>crypto 24/7. Are you ready?</div>
+
+    <div class="neural-wrap">
+      <canvas id="neuralCanvas"></canvas>
+    </div>
+
+    <div class="ai-stats">
+      <div class="ai-stat">
+        <span class="ai-val">24/7</span>
+        <div class="ai-lbl">ALWAYS ON</div>
+      </div>
+      <div class="ai-stat">
+        <span class="ai-val">ms</span>
+        <div class="ai-lbl">EXEC SPEED</div>
+      </div>
+      <div class="ai-stat">
+        <span class="ai-val">0</span>
+        <div class="ai-lbl">EMOTION</div>
+      </div>
+    </div>
+
+    <div class="bullets">
+      <div class="bullet"><span class="bi">▸</span>Scans 1000s of market signals simultaneously</div>
+      <div class="bullet"><span class="bi">▸</span>Executes trades faster than any human</div>
+      <div class="bullet"><span class="bi">▸</span>Risk: fails in black swan events — use with caution</div>
+      <div class="bullet"><span class="bi">▸</span>Research: Virtuals Protocol, ai16z, AIXBT (DYOR)</div>
+    </div>
+    <div class="footer">
+      <div class="logo">ARES CRYPTO</div>
+      <div class="tagline">MASTER TRADING</div>
+    </div>
+    <div class="disc">Not financial advice. AI tools carry additional risk.</div>
+  </div>
+</div>
+
+
+<script>
+// ── CARD 1: Build DCA Calendar ──
+(function() {
+  const cal = document.getElementById('dcaCalendar');
+  const days = ['M','T','W','T','F','S','S'];
+  const buyDays = [1, 8, 15, 22, 29]; // Monday pattern
+  let html = '';
+  for (let i = 1; i <= 35; i++) {
+    const isBuy = buyDays.includes(i);
+    html += `<div class="day ${isBuy ? 'buy' : ''}">${isBuy ? '$' : (i <= 28 ? i : '')}</div>`;
+  }
+  cal.innerHTML = html;
+})();
+
+
+// ── CARD 3: RWA Blockchain Nodes on Canvas ──
+(function() {
+  const canvas = document.getElementById('rwaCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let nodes = [];
+  let animId;
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width || 520;
+    canvas.height = rect.height || 520;
+    nodes = [];
+    for (let i = 0; i < 18; i++) {
+      nodes.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 3 + 1.5,
+        type: Math.random() > 0.6 ? 'gold' : 'teal'
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Connections
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(0,201,184,${0.06 * (1 - dist/150)})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+    // Nodes
+    nodes.forEach(n => {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = n.type === 'gold' ? 'rgba(201,168,76,0.5)' : 'rgba(0,201,184,0.5)';
+      ctx.fill();
+      // Move
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+    });
+    animId = requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+})();
+
+
+// ── CARD 6: Neural Network Animation ──
+(function() {
+  const canvas = document.getElementById('neuralCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    const wrap = canvas.parentElement;
+    canvas.width = wrap.offsetWidth || 448;
+    canvas.height = wrap.offsetHeight || 120;
+  }
+  resize();
+
+  // Layer config: [input, hidden1, hidden2, output]
+  const layers = [4, 6, 6, 3];
+  let neurons = [];
+  let signals = [];
+
+  function buildNeurons() {
+    neurons = [];
+    const W = canvas.width, H = canvas.height;
+    const lCount = layers.length;
+    layers.forEach((count, li) => {
+      const x = (W * (li + 0.5)) / lCount;
+      for (let ni = 0; ni < count; ni++) {
+        const y = H * (ni + 0.5) / count;
+        neurons.push({ x, y, layer: li, idx: ni, glow: 0 });
+      }
+    });
+  }
+
+  function spawnSignal() {
+    const fromLayer = Math.floor(Math.random() * (layers.length - 1));
+    const fromNeurons = neurons.filter(n => n.layer === fromLayer);
+    const toNeurons = neurons.filter(n => n.layer === fromLayer + 1);
+    if (!fromNeurons.length || !toNeurons.length) return;
+    const from = fromNeurons[Math.floor(Math.random() * fromNeurons.length)];
+    const to = toNeurons[Math.floor(Math.random() * toNeurons.length)];
+    signals.push({ from, to, t: 0, speed: 0.012 + Math.random() * 0.01, color: Math.random() > 0.7 ? '#c9a84c' : '#00c9b8' });
+  }
+
+  buildNeurons();
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw connections (faint)
+    for (let li = 0; li < layers.length - 1; li++) {
+      const from = neurons.filter(n => n.layer === li);
+      const to = neurons.filter(n => n.layer === li + 1);
+      from.forEach(f => {
+        to.forEach(t => {
+          ctx.beginPath();
+          ctx.moveTo(f.x, f.y);
+          ctx.lineTo(t.x, t.y);
+          ctx.strokeStyle = 'rgba(0,201,184,0.06)';
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        });
+      });
+    }
+
+    // Draw neurons
+    neurons.forEach(n => {
+      const glow = n.glow || 0;
+      if (glow > 0) {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 8 + glow * 4, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0,201,184,${glow * 0.15})`;
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 3 + glow * 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = glow > 0.3 ? `rgba(0,229,210,${0.4 + glow * 0.6})` : 'rgba(0,201,184,0.35)';
+      ctx.fill();
+      if (n.glow > 0) n.glow = Math.max(0, n.glow - 0.04);
+    });
+
+    // Move + draw signals
+    signals = signals.filter(s => {
+      s.t += s.speed;
+      if (s.t >= 1) {
+        s.to.glow = 1;
+        return false;
+      }
+      const x = s.from.x + (s.to.x - s.from.x) * s.t;
+      const y = s.from.y + (s.to.y - s.from.y) * s.t;
+      ctx.beginPath();
+      ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = s.color;
+      ctx.fill();
+      // Trail
+      ctx.beginPath();
+      ctx.arc(x - (s.to.x - s.from.x) * 0.05, y - (s.to.y - s.from.y) * 0.05, 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = s.color.replace(')', ',0.4)').replace('rgb', 'rgba');
+      ctx.fill();
+      return true;
+    });
+
+    if (Math.random() < 0.15) spawnSignal();
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+})();
+</script>
+</body>
+</html>
